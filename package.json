@@ -1,0 +1,14 @@
+{
+  "name": "MochaTest",
+  "version": "0.0.0",
+  "description": "MochaTest",
+  "main": "app.js",
+  "author": {
+    "name": "bkazic",
+    "email": ""
+  },
+  "scripts": {
+    "start": "set NODE_ENV=development&& node app.js",
+    "test": "set NODE_ENV=test&& mocha"
+  }
+}

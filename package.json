@@ -10,5 +10,8 @@
   "scripts": {
     "start": "set NODE_ENV=development&& node app.js",
     "test": "mocha"
+  },  
+  "devDependencies": {
+    "mocha": "^2.3.3"
   }
 }

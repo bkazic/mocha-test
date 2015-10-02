@@ -9,6 +9,6 @@
   },
   "scripts": {
     "start": "set NODE_ENV=development&& node app.js",
-    "test": "set NODE_ENV=test&& mocha"
+    "test": "mocha"
   }
 }

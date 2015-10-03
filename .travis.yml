@@ -6,3 +6,12 @@ node_js:
 env:
   global:
     - NODE_ENV=test
+before_install: |
+    case ${TRAVIS_NODE_VERSION} in
+        iojs*)
+            echo "Not upgrading npm for iojs."
+            ;;
+        *)
+            npm update -g npm
+            ;;
+    esac

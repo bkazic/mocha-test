@@ -1,1 +1,2 @@
-﻿console.log('Hello world');
+﻿server = require('./server')();
+console.log('Hello world');

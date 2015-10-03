@@ -1,18 +1,24 @@
 ﻿var assert = require("assert");
+var request = require("supertest");
 describe('Array', function () {
 	
-console.log("NODE_ENV is: " + process.env.NODE_ENV);	
+	// check node env
+	console.log("NODE_ENV is: " + process.env.NODE_ENV);	
+	if (process.env.NODE_ENV !== "test") {
+		console.log("Ok, this is not test")
+	} else {
+		console.log("HAEEEYY, THIS IS TEST");
+	}
 	
-if (process.env.NODE_ENV !== "test") {
-	console.log("Ok, this is not test")
-} else {
-	console.log("HAEEEYY, THIS IS TEST");
-}
-	
-    describe('#indexOf()', function () {
-        it('should return -1 when the value is not present', function () {
-            assert.equal(-1, [1, 2, 3].indexOf(5));
-            assert.equal(-1, [1, 2, 3].indexOf(0));
-        });
-    });
+	// run server
+	beforeEach(function () {
+	  server = require('../server')();
+	});
+    
+    // test server
+	it('responds to /', function testSlash(done) {
+	  request(server)
+	    .get('/')
+	    .expect(200, done);
+	});
 });

@@ -3,6 +3,9 @@ var request = require("supertest");
 
 // test if NODE_ENV is set to "test"
 describe('Testing NODE_ENV', function () {
+	// check node env
+	console.log("NODE_ENV is: " + process.env.NODE_ENV);	
+	
     it('should be set to "test"', function () {
         assert.equal(process.env.NODE_ENV, "test")
     });

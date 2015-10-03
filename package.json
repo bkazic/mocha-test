@@ -12,6 +12,7 @@
     "test": "set NODE_ENV=test&& mocha"
   },  
   "dependencies": {
+    "qminer": "^2.2.1",
     "express": "^4.13.3"
   },
   "devDependencies": {

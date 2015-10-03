@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "set NODE_ENV=development&& node app.js",
-    "test": "mocha"
+    "test": "set NODE_ENV=test&& mocha"
   },  
   "devDependencies": {
     "mocha": "^2.3.3"

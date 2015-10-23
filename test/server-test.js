@@ -17,7 +17,7 @@ describe('Server test', function () {
 	  server = require('../server')();
 	});
     
-    // test server
+    	// test server
 	it('responds to /', function testSlash(done) {
 	  request(server)
 	    .get('/')
